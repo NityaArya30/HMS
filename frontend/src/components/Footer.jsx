@@ -50,6 +50,7 @@ const Footer = () => {
                     <Link to={"/"}>Home</Link>
                     <Link to={"/appointment"}>Appointment</Link>
                     <Link to={"/about"}>About</Link>
+                    <Link to={"/BMICalculator"}>BMI</Link>
                 </ul>
             </div>
             <div>

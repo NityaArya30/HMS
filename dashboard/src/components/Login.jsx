@@ -34,8 +34,8 @@ const Login = () => {
   return (
     <>
       <div className='container form-component'>
-        <img src='/logo.png' alt='Logo' className='logo' />
-        <h1 className='form-title'>Welcome to Arogya</h1>
+        <img src='/logo1.png' height={300} width={300} alt='Logo' className='logo' />
+        <h1 className='form-title'>Welcome to Arogya Connect</h1>
         <p>Only Admins Are allowed to Access these resources!</p>
         <form onSubmit={handleLogin}>
             <input type='text' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email'/>

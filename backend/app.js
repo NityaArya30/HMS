@@ -8,6 +8,7 @@ import messageRouter from "./router/messageRouter.js"
 import {errorMiddleware} from "./middlewares/errorMiddleware.js"
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
+import prescriptionRouter from "./router/prescriptionRouter.js"
 const app = express();
 config({path: "./config/config.env"});
 //middleware creation: CONNECTING frontend and backend
@@ -28,6 +29,7 @@ app.use(fileUpload({
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
+app.use("/api/v1/prescription",prescriptionRouter)
 
 
 dbConnection();

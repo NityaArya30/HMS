@@ -12,6 +12,7 @@ import Navbar from './components/Navbar';
 import { Context } from './main';
 import axios from 'axios';
 import Footer from './components/Footer';
+import BMICalculator from './pages/BMICalculator';
 
 const App = () => {
   const {isAuthenticated, setIsAuthenticated, user,  setUser} = useContext(Context);
@@ -38,6 +39,7 @@ const App = () => {
           <Route path='/about' element={<AboutUs/>} />
           <Route path='/register' element={<Register/>} />
           <Route path='/login' element={<Login/>} />
+          <Route path="/BMICalculator" element={<BMICalculator />} />
         </Routes>
       <Footer />
         <ToastContainer position='top-center' />

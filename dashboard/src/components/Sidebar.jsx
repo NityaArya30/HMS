@@ -6,10 +6,11 @@ import {AiFillMessage} from "react-icons/ai";
 import {GiHamburgerMenu} from "react-icons/gi"; 
 import {FaUserDoctor} from "react-icons/fa6"; 
 import {MdAddModerator} from "react-icons/md"; 
-import {IoPersonAddSharp} from "react-icons/io5"; 
+import {IoPersonAddSharp, IoDocumentText} from "react-icons/io5"; 
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { FaUserInjured } from 'react-icons/fa';
 
 
 const Sidebar = () => {
@@ -39,6 +40,14 @@ const Sidebar = () => {
         navigateTo("/admin/addnew");
         setShow(!show);
     }
+    const gotoPatientDetails = () => {
+        navigateTo("/PatientDetails");
+        setShow(!show);
+    }
+    const gotoPrescriptionPage = () => {
+      navigateTo("/prescriptions");
+      setShow(!show);
+  }
     
 
     const handleLogout = async()=>{
@@ -60,6 +69,8 @@ const Sidebar = () => {
         <MdAddModerator onClick={gotoAddNewAdmin} />
         <IoPersonAddSharp onClick={gotoAddNewDoctor} />
         <AiFillMessage onClick={gotoMessagePage} />
+        <FaUserInjured onClick={gotoPatientDetails} />
+        <IoDocumentText onClick={gotoPrescriptionPage} />
         <RiLogoutBoxFill  onClick={handleLogout}/>
       </div>
       </nav>
