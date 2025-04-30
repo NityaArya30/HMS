@@ -14,6 +14,8 @@ import axios from 'axios';
 import "./App.css"
 import PatientDetails from './components/PatientDetails';
 import PrescriptionDetails from './components/PrescriptionDetails';
+import AddNewMedi from './components/AddNewMedi';
+import BedManagement from './components/BedManagement';
 
 
 const App = () => {
@@ -39,11 +41,13 @@ const App = () => {
           <Route path='/' element={<Dashboard/> } />
           <Route path='/login' element={<Login/> } />
           <Route path='/doctor/addnew' element={<AddNewDoctor/> } />
+          <Route path='/medicine/addnew' element={<AddNewMedi/> } />
           <Route path='/admin/addnew' element={<AddNewAdmin/> } />
           <Route path='/messages' element={<Messages/> } />
           <Route path='/doctors' element={<Doctors/> } />
           <Route path='/PatientDetails' element={<PatientDetails/> } />
           <Route path='/prescriptions' element={<PrescriptionDetails/> } />
+          <Route path='/beds' element={<BedManagement/> } />
         </Routes>
         <ToastContainer position='top-center' />
       </Router>

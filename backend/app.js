@@ -9,6 +9,9 @@ import {errorMiddleware} from "./middlewares/errorMiddleware.js"
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
 import prescriptionRouter from "./router/prescriptionRouter.js"
+import medicineRouter from "./router/medicineRouter.js"
+import bedRouter from "./router/bedRouter.js"
+
 const app = express();
 config({path: "./config/config.env"});
 //middleware creation: CONNECTING frontend and backend
@@ -29,7 +32,15 @@ app.use(fileUpload({
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
-app.use("/api/v1/prescription",prescriptionRouter)
+app.use("/api/v1/prescription",prescriptionRouter);
+app.use("/api/v1/beds",bedRouter);
+app.use("/api/v1/medicine",medicineRouter);
+app.use((req, res) => {
+    res.status(404).json({
+      message: `Route Not Found: ${req.originalUrl}`,
+    });
+  });
+
 
 
 dbConnection();

@@ -453,7 +453,7 @@ nav .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: -80px; /* Moves navbar slightly left */
+  margin-left: -180px; 
 }
 nav .navLinks {
   display: flex;
@@ -467,9 +467,9 @@ nav .navLinks .links {
 nav .navLinks .links a {
   text-decoration: none;
   color: #222;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  letter-spacing: 1.4px;
+  letter-spacing: 1px;
 }
 nav .navLinks .links a:hover {
   color: #000;
@@ -690,4 +690,76 @@ bmiBody {
   margin-top: 20px;
   font-size: 18px;
 }
+
+
+
+
+
+
+.medicines {
+  padding: 2rem;
+  background-color: #ced5d836;
+
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #007bff; 
+  text-align: center;
+  margin: 5rem 0 2rem;
+  font-weight: bold;
+}
+
+
+.medicine-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.medicine-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+}
+
+.medicine-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.medicine-info {
+  margin-top: 1rem;
+}
+
+.medicine-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.medicine-price {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.no-data {
+  font-size: 1.5rem;
+  color: #999;
+  text-align: center;
+  width: 100%;
+}
+
 

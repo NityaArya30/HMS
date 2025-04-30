@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+/* body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fcf7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Main Container */
+.bed-container {
+    width: 80%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.bed-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+h2 {
+    font-size: 3rem;
+    color: #1e3a8a;
+    /* Indigo */
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Summary Section */
+.summary {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #0ea5e9;
+    /* Sky Blue */
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 14px;
+    margin-bottom: 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.summary p {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* Add Bed Section */
+.add-bed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 16px;
+}
+
+.add-bed select,
+.add-bed input {
+    width: 70%;
+    padding: 16px;
+    font-size: 1.2rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-bed select:focus,
+.add-bed input:focus {
+    border-color: #0f766e;
+    /* Teal */
+    outline: none;
+    box-shadow: 0 0 5px rgba(15, 118, 110, 0.5);
+}
+
+.add-bed button {
+    padding: 14px 35px;
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #16a34a, #22c55e);
+    /* Green gradient */
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.add-bed button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(34, 197, 94, 0.4);
+}
+
+/* Assign Bed Section */
+.assign-bed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.assign-bed select {
+    width: 70%;
+    padding: 16px;
+    font-size: 1.2rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background-color: #f1f5f9;
+    transition: 0.3s ease;
+}
+
+.assign-bed select:focus {
+    border-color: #0f766e;
+    outline: none;
+    box-shadow: 0 0 5px rgba(15, 118, 110, 0.5);
+}
+
+/* Bed List Section */
+.bed-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* Bed Card Styling */
+/* Bed Card Styling */
+.bed-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Background color based on status */
+.bed-card.occupied {
+    background-color: #fca5a5;
+    /* Light red */
+}
+
+.bed-card.available {
+    background-color: #86efac;
+    /* Light green */
+}
+
+.bed-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bed-card p {
+    font-size: 1.3rem;
+    color: #374151;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Status Badge */
+.bed-card .status {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 999px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.bed-card.occupied .status {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.bed-card.available .status {
+    background-color: #10b981;
+    color: #fff;
+}
+
+/* Button Group */
+.bed-card .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.bed-card button {
+    flex: 1;
+    padding: 14px 22px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Assign Button - Blue */
+.bed-card .assign-btn {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    /* Blue gradient */
+    color: #fff;
+}
+
+.bed-card .assign-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+/* Lighter color when the bed is occupied */
+/* Assign Button - Updated with vibrant colors and hover effects */
+.bed-card .assign-btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* Vibrant gradient (peach to orange) */
+    color: #fff;
+    padding: 16px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(255, 126, 95, 0.4);
+}
+
+/* Hover Effect */
+.bed-card .assign-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 126, 95, 0.6);
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    /* Reversed gradient */
+    transition: all 0.3s ease;
+}
+
+/* Disabled/Occupied Button (when bed is occupied) */
+.bed-card.occupied .assign-btn {
+    background: linear-gradient(to right, #fcbf49, #f77f00);
+    /* Yellow to orange gradient */
+    color: #fff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+.bed-card .delete {
+    background: linear-gradient(to right, #ef4444, #dc2626);
+    /* Red gradient */
+    color: #fff;
+}
+
+.bed-card .delete:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(239, 68, 68, 0.4);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bed-list {
+        grid-template-columns: 1fr;
+    }
+
+    .add-bed select,
+    .add-bed input,
+    .add-bed button,
+    .assign-bed select {
+        width: 85%;
+    }
+
+    .bed-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary p {
+        margin-bottom: 10px;
+    }
+
+    .bed-container {
+        padding: 20px;
+    }
+}

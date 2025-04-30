@@ -49,6 +49,19 @@ export const patientRegister = catchAsyncErrors(async(req,res,next) => {
                 // })
 });
 
+export const getAllPatients = catchAsyncErrors(async (req, res, next) => {
+    const patients = await User.find({ role: "Patient" });  // Fetch all users with role "Patient"
+
+    if (!patients || patients.length === 0) {
+        return next(new ErrorHandler("No patients found!", 404));  // Handle if no patients found
+    }
+
+    res.status(200).json({
+        success: true,
+        patients,  // Return the list of patients
+    });
+});
+
 //LOGIN PAGE
 export const login  = catchAsyncErrors(async(req, res, next)=> {
     const {email, password, confirmPassword, role} =req.body;

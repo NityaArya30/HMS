@@ -13,6 +13,9 @@ import { Context } from './main';
 import axios from 'axios';
 import Footer from './components/Footer';
 import BMICalculator from './pages/BMICalculator';
+import Medicines from './pages/Medicines';
+import CartPage from './pages/CartPage';
+
 
 const App = () => {
   const {isAuthenticated, setIsAuthenticated, user,  setUser} = useContext(Context);
@@ -40,6 +43,8 @@ const App = () => {
           <Route path='/register' element={<Register/>} />
           <Route path='/login' element={<Login/>} />
           <Route path="/BMICalculator" element={<BMICalculator />} />
+          <Route path="/medicines" element={<Medicines />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       <Footer />
         <ToastContainer position='top-center' />

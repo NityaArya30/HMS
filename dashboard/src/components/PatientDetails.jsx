@@ -39,7 +39,7 @@ const PrescriptionForm = () => {
     return (
         <section className="page">
             <div className="container form-component add-admin-form">
-                <img src="/logo.png" alt="logo" className="logo" />
+                <img src="/mylogo.jpeg" alt="logo" className="logo" height={100} />
                 <h1 className="form-title">ADD PRESCRIPTION</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">

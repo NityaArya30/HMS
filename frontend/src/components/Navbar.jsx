@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+
 const Navbar = () => {
     const [show, setShow] = useState(false);
     const { isAuthenticated, setIsAuthenticated } = useContext(Context);
@@ -28,14 +29,15 @@ const Navbar = () => {
     return (
         <nav className="container">
             <div className="logo">
-                <img src='/logo.png' alt='logo' className='logo-img' />
+                <img src='/mylogo.jpeg' alt='logo' className='logo-img' />
             </div>
             <div className={show ? "navLinks showmenu" : "navLinks"}>
-                <div className="links">
+                <div className="links nav-left">
                     <Link to={"/"}>HOME</Link>
                     <Link to={"/appointment"}>APPOINTMENT</Link>
                     <Link to={"/about"}>ABOUT US</Link>
                     <Link to={"/BMICalculator"}>BMI</Link>
+                    <Link to={"/medicines"}>MEDICINE</Link>
                 </div>
                 <div className="quick-aid-container">
                     <a href="https://quick-aid.vercel.app/" target="_blank" rel="noopener noreferrer" className="quick-aid-link">

@@ -32,7 +32,7 @@ const Messages = () => {
               <div className='card'>
                 <div className='details'>
                   <p>First Name: <span>{element.firstName}</span></p>
-                  <p>Last Name: <span>{element.lasttName}</span></p>
+                  <p>Last Name: <span>{element.lastName}</span></p>
                   <p>Email: <span>{element.email}</span></p>
                   <p>Contact No.: <span>{element.phone}</span></p>
                   <p>Message: <span>{element.message}</span></p>
