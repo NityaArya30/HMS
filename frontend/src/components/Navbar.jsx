@@ -40,7 +40,7 @@ const Navbar = () => {
                     <Link to={"/medicines"}>MEDICINE</Link>
                 </div>
                 <div className="quick-aid-container">
-                    <a href="https://quick-aid.vercel.app/" target="_blank" rel="noopener noreferrer" className="quick-aid-link">
+                    <a href="https://rapid-relief.vercel.app/" target="_blank" rel="noopener noreferrer" className="quick-aid-link">
                         EMERGENCY
                     </a>
                     {isAuthenticated ? (
