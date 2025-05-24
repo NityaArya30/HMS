@@ -14,3 +14,6 @@ each with specific permissions.
 • Integrated an emergency kit feature, enabling individuals from any region to access emergency treatment.
 
 • Devised and implemented a dashboard displaying real-time data on doctors, patients, and bed availability.
+
+## Demo Link
+[https://drive.google.com/file/d/18iH5bkbwtIVvVW2X2oaIf1IlDd2827fJ/view?usp=drivesdk] 
